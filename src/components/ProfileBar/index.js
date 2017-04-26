@@ -3,10 +3,6 @@ import React, { Component } from 'react'
 import styles from './profile-bar.css'
 
 class ProfileBar extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <div className={styles.root}>
