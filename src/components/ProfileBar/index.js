@@ -1,23 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import styles from './profile-bar.css'
 
-class ProfileBar extends React.Component {
-  render() {
-    return (
-      <div className={styles.root}>
-        <figure>
-          <img className={styles.avatar} src={this.props.picture} />
-        </figure>
-        <span className={styles.username}>Hola @{this.props.username}!</span>
-        <button onClick={this.props.onOpenText} className={styles.button}>
-          <span className="fa fa-lg fa-edit"></span>
-          Tweet!
-        </button>
-      </div>
-    )
-  }
-
+function ProfileBar(props) {
+  return (
+    <div className={styles.root}>
+      <figure>
+        <img className={styles.avatar} src={props.picture} />
+      </figure>
+      <span className={styles.username}>Hola @{props.username}!</span>
+      <button onClick={props.onOpenText} className={styles.button}>
+        <span className="fa fa-lg fa-edit"></span>
+        Tweet!
+      </button>
+    </div>
+  )
 }
 
 export default ProfileBar
